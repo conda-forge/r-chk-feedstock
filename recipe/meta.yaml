@@ -1,4 +1,4 @@
-{% set version = '0.5.1' %}
+{% set version = "0.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/chk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/chk/chk_{{ version }}.tar.gz
-  sha256: b0ba8e824b50e2fa275fc393418e521e434334e1d1385b7af5cfad7a52441c27
+  sha256: fd131b49e1e1b9688f17fef6ffe1faa5570b46a8e66cb46d38f28fda6f23f8a5
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -41,11 +41,10 @@ test:
 about:
   home: https://github.com/poissonconsulting/chk
   license: MIT
-  summary: For developers to check user-supplied function arguments.  It is designed to be simple,
-    fast and customizable.  Error messages follow the tidyverse style guide.
+  summary: For developers to check user-supplied function arguments.  It is designed to be simple, fast and customizable.  Error messages follow the tidyverse style guide.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
