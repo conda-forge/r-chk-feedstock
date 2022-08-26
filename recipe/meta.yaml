@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/chk_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/chk/chk_{{ version }}.tar.gz
-  sha256: fe24b081a7e35d5399412f55121b6b35b363b2023acb94fbdb08c55701d8ec81
+  sha256: fc567b2484f45443a639a6bf0ac6683bce33b78a9abebb75465db4a59154835b
 
 build:
   merge_build_host: true  # [win]
